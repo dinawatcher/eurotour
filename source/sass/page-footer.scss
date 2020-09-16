@@ -1,0 +1,137 @@
+.page-footer {
+  color: lighten($darkest, 50%);
+  font-size: 14px;
+
+  h2 {
+    color: $darkest;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.page-footer__column {
+  width: 33%;
+}
+
+.page-footer__travel {
+  display: flex;
+}
+
+.page-footer__travel-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.page-footer__travel-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.page-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+
+  a {
+    margin-bottom: 20px;
+    color: $accent-main;
+  }
+}
+
+.page-footer__contact {
+  position: relative;
+}
+
+.page-footer__email::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -40px;
+  width: 26px;
+  height: 20px;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+}
+
+.page-footer__tel::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -35px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-phone-grey.svg");
+  background-repeat: no-repeat;
+}
+
+.page-footer__corporative-text {
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-footer__wrapper {
+    max-width: $tablet-min-width;
+  }
+
+  .page-footer__cities-list {
+    width: 60%;
+  }
+
+  .page-footer__travel-list {
+    width: 33%;
+  }
+
+  .page-footer__travel-list:not(:last-child) {
+    margin: 0;
+  }
+
+  .page-footer__corporative {
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-footer__corporative-text {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+  .page-footer {
+    h2 {
+      text-align: center;
+    }
+  }
+  .page-footer__wrapper {
+    flex-direction: column;
+    max-width: $mobile-min-width;
+  }
+
+  .page-footer__column {
+    width: 100%
+  }
+
+  .page-footer__travel {
+    flex-wrap: wrap;
+  }
+
+  .page-footer__contacts {
+    text-align: center;
+  }
+
+  .page-footer__corporative {
+    padding: 0 15px;
+    text-align: center;
+  }
+}

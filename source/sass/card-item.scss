@@ -1,0 +1,48 @@
+.card-item {
+  position: relative;
+}
+
+.card-item__country {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 215px;
+  padding: 17px 5px 15px;
+  margin: 0;
+  background-color: $light;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.41px;
+  transform: translateX(-50%);
+
+}
+
+.card-item__popup {
+  display: none;
+}
+
+.card-item__link {
+  display: block;
+  padding: 28px 25px;
+  border: 1px solid $light;
+  color: $light;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card-item:hover {
+  .card-item__popup {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba($darkest, 0.6);
+  }
+}

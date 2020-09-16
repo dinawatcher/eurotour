@@ -1,0 +1,33 @@
+.btn {
+  display: block;
+  padding: 30px 35px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: $light;
+  background-color: $accent-main;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: $accent-hover;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .btn {
+    padding: 19px 35px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+  .btn {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+}

@@ -1,0 +1,171 @@
+.prices {
+  margin-bottom: 150px;
+}
+
+.prices__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.prices__column {
+  width: 370px;
+}
+
+.prices__column:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.prices__intro {
+  padding: 10px 32px;
+}
+
+.prices__title {
+  position: relative;
+  padding-bottom: 30px;
+  margin: 0 0 30px 0;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: -1.25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 4px;
+    background-color: $accent-main;
+  }
+}
+
+.prices__desc {
+  color: lighten($dark, 30%);
+  line-height: 27px;
+}
+
+.prices__contacts {
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 34px;
+  }
+
+  a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 32px;
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .prices__wrapper {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: $tablet-min-width;
+  }
+
+  .prices__column {
+    width: 288px;
+  }
+
+  .prices__column:not(:last-of-type) {
+    margin: 0;
+  }
+
+  .prices__intro {
+    order: -1;
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .prices__title {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .prices__contacts {
+    h3 {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: $accent-main;
+      font-size: 18px;
+      text-decoration: underline;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+  .prices__wrapper {
+    flex-direction: column;
+    max-width: $mobile-min-width;
+    padding: 0 15px;
+  }
+
+  .prices__column {
+    width: 288px;
+    margin: 0 auto 30px;
+  }
+
+  .prices__intro {
+    order: -1;
+    padding: 0;
+    text-align: center;
+  }
+
+  .prices__title {
+    font-size: 24px;
+    line-height: 36px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .prices__contacts {
+    h3 {
+      font-size: 18px;
+    }
+
+    a {
+      color: $accent-main;
+      font-size: 18px;
+      text-decoration: underline;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.cards-list {
+  padding-bottom: 97px;
+}
+
+.cards-list__wrapper {
+  width: $desktop-width;
+  margin: 0 auto;
+}
+
+.cards-list__first-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.cards-list__second-row {
+  display: flex;
+  justify-content: center;
+}
+
+.cards-list__card {
+  width: 30%;
+}
+
+.cards-list__card:not(:nth-child(3)),
+.cards-list__card:not(:last-child) {
+  margin-right: 60px;
+}

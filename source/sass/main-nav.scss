@@ -1,0 +1,224 @@
+.main-nav {
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  a {
+    margin-left: 40px;
+    color: $darkest;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      color: $accent-main;
+    }
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .main-nav {
+    ul {
+      display: none;
+    }
+
+    .main-nav__toggle {
+      position: relative;
+      display: block;
+      width: 72px;
+      height: 50px;
+      border: none;
+      background-color: $accent-main;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        background-image: url("../img/icon-burger.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .main-nav--opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: $tablet-min-width;
+    background-color: $light;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        position: relative;
+        margin-bottom: 30px;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 17px;
+      margin-left: 0;
+      background-color: $light-bg;
+      font-size: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 7px;
+        height: 12px;
+        background-image: url("../img/icon-arrow-mini.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    .main-nav__toggle {
+      order: -1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 50px;
+      margin-left: auto;
+      border: none;
+      background-color: $light;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 22px;
+        height: 22px;
+        background-image: url("../img/icon-close.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+  .main-nav {
+    ul {
+      display: none;
+    }
+
+    .main-nav__toggle {
+      position: relative;
+      display: block;
+      width: 72px;
+      height: 50px;
+      border: none;
+      background-color: $accent-main;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        background-image: url("../img/icon-burger.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .main-nav--opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: $mobile-min-width;
+    background-color: $light;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        position: relative;
+        margin-bottom: 30px;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 17px;
+      margin-left: 0;
+      background-color: $light-bg;
+      font-size: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 7px;
+        height: 12px;
+        background-image: url("../img/icon-arrow-mini.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    .main-nav__toggle {
+      order: -1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 50px;
+      margin-left: auto;
+      border: none;
+      background-color: $light;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 22px;
+        height: 22px;
+        background-image: url("../img/icon-close.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

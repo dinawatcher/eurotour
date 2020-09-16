@@ -1,0 +1,15 @@
+.country-toggle {
+  padding: 0;
+  border: none;
+  color: lighten($dark, 70%);
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.41px;
+  cursor: pointer;
+}
+
+.country-toggle--active {
+  color: $accent-main;
+}

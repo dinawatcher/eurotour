@@ -1,0 +1,15 @@
+.page-main {
+  padding: 180px 0 170px;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-main {
+    padding-top: 85px;
+  }
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+  .page-main {
+    padding-bottom: 70px;
+  }
+}
